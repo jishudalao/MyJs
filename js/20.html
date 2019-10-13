@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="熊仔其人">
+    <title>转盘抽奖效果</title>
+    <!-- 这里是css部分 -->
+    <style>
+        #bg {
+            width: 650px;
+            height: 600px;
+            margin: 0 auto;
+            background: url(turntable-bg.jpg) no-repeat;
+            position: relative;
+        }
+
+        img[src^="pointer"] {
+            position: absolute;
+            z-index: 10;
+            top: 155px;
+            left: 247px;
+        }
+
+        img[src^="turntable"] {
+            position: absolute;
+            z-index: 5;
+            top: 60px;
+            left: 116px;
+            transition: all 4s;
+        }
+    </style>
+</head>
+<body>
+ <div id="bg"><img src="pointer.png" alt="pointer"><img src="turntable.png" alt="turntable"></div>  
+ <script>
+	 var oPointer = document.getElementsByTagName("img")[0];
+	 var oTurntable = document.getElementsByTagName("img")[1];
+ 	var num = 0;
+ 	var pingjun = 51.4;
+ 	var flag = true;
+ 	oPointer.onclick = function(){
+ 		if(flag){
+ 			flag = !flag;
+ 			oTurntable.style.transform = "rotate(0deg)";
+ 			ratating();
+ 		}
+ 	}
+ 	function ratating(){
+ 		var timer = null;
+ 		var jiaodu = 0;
+ 		 clearInterval(timer);
+ 		timer = setInterval(function(){
+ 			if(Math.floor(jiaodu / 360) < 3){
+ 				jiaodu = Math.floor(Math.random() * 3600);
+ 			}else {
+ 				 oTurntable.style.transform = "rotate(" + jiaodu + "deg)";
+ 				 clearInterval(timer);
+ 				 setTimeout(function () {
+ 					flag = !flag;
+                     num = jiaodu % 360;
+                     if (num <= pingjun * 1) { alert("4999元"); console.log("rdm=" + rdm + "，num=" + num + "，" + "4999元"); }
+                     else if (num <= pingjun * 2) { alert("50元"); console.log("rdm=" + rdm + "，num=" + num + "，" + "50元"); }
+                     else if (num <= pingjun * 3) { alert("10元"); console.log("rdm=" + rdm + "，num=" + num + "，" + "10元"); }
+                     else if (num <=  pingjun * 4) { alert("5元"); console.log("rdm=" + rdm + "，num=" + num + "，" + "5元"); }
+                     else if (num <= pingjun * 5) { alert("免息服务"); console.log("rdm=" + rdm + "，num=" + num + "，" + "免息服务"); }
+                     else if (num <= pingjun * 6) { alert("提交白金"); console.log("rdm=" + rdm + "，num=" + num + "，" + "提交白金"); }
+                     else if (num <= pingjun * 7) { alert("未中奖"); console.log("rdm=" + rdm + "，num=" + num + "，" + "未中奖"); }
+ 				 },4000);
+ 			}
+ 		},30);
+ 	}
+ </script>
+</body>
+</html>

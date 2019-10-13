@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var prev = document.getElementById("prev");
+		var next = document.getElementById("next");
+		
+		prev.onclick = function() {
+			
+			alter("上一张");
+		}
+		next.onclick = function() {
+			alter("下一张");
+			
+		}
+	}
+</script>
+</head>
+<body>
+<div>
+	<img id="img"alt="图片" src="1.jpg">
+	<button id="prev">上一页</button>
+	<button id="next">下一页</button>
+	
+	</div>
+</body>
+</html>

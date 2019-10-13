@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = function() {
+	var ul = document.getElementById("ul");
+	ul.onclick = function (event) {
+		event = event || window.event;
+		
+		if(event.target.className=="link") {
+			alert("我是link的委派函数");
+		}
+	}
+}
+	
+	
+</script>
+</head>
+<body>
+	<ul id="ul">
+	<li>
+	<p>我是p元素</p>
+	</li>
+	<li><a href="javascript:;"class="link">超链接1</a></li>
+	<li><a href="javascript:;"class="link">超链接2</a></li>
+	<li><a href="javascript:;"class="link">超链接3</a></li>
+	<li><a href="javascript:;"class="link">超链接4</a></li>
+	</ul>
+</body>
+</html>

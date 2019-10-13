@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		/*function del(){
+			var dels = document.getElementsByTagName("a");
+			for(var i=0;i<dels.length;i++) {
+				dels[i].onclick = function() {
+					if(confirm("你确定要删除吗?"))
+					this.parentNode.parentNode.innerHTML="";
+					/*var tr = this.parentNode.parentNode;
+					tr.parentNode.removeChild(tr);
+				
+				}
+			}
+		};*/
+		//del();
+		function add() {
+			var submit = document.getElementById("submits");
+			submit.onclick = function() {
+				var i1 = document.getElementById("name").value;
+				var i2 = document.getElementById("gender").value;
+				var i3 = document.getElementById("age").value;
+				
+
+				var tr = document.createElement("tr");
+				
+				var named = document.createElement("td");
+				var gendered = document.createElement("td");
+				var aged = document.createElement("td");
+				var ad = document.createElement("td");
+				
+				var a = document.createElement("a");
+				
+				var name = document.createTextNode(i1);
+				var gender = document.createTextNode(i2);
+				var age = document.createTextNode(i3);
+				var deleteTest = document.createTextNode("delete");
+				
+				
+				
+				var table = document.getElementById("tb");
+				
+				//添加
+				named.appendChild(name);
+				gendered.appendChild(gender);
+				aged.appendChild(age);
+				a.appendChild(deleteTest);
+				ad.appendChild(a);
+				
+				tr.appendChild(named);
+				tr.appendChild(gendered);
+				tr.appendChild(aged);
+				tr.appendChild(ad);
+				
+				var tbody = table.getElementsByTagName("tbody")[0];
+				tbody.appendChild(tr);
+				alert(table.innerHTML);
+				
+			}
+		};
+		add();
+		
+	}
+</script>
+</head>
+<body>
+	<table id="tb">
+	<tr>
+	<td>姓名</td>
+	<td>性别</td>
+	<td>年龄</td>
+	<td>编辑</td>
+	</tr>
+	
+	
+	<tr>
+	
+	<td>张三</td>
+	<td>男</td>
+	<td>19</td>
+	<td><a href="javascript:;">Delete</a></td>
+	</tr>
+	</table>
+	
+	<br>
+	<br>
+	<br>
+	<form action="">
+	姓名：<input type="text"id="name"value="aaa">
+	<br>
+	性别：<input type="text"id="gender"value="bbb">
+	<br>
+	年龄：<input type="text"id="age"value="ccc">
+	<br>
+	
+	<br>
+	</form>
+	<button id="submits">提交</button>
+</body>
+</html>

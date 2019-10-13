@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var a="你好:\"天气不错\"";
+	var b = "aaa"* "bbb"
+	//null 和 undifined没有toString方法
+	var c = "555.5ccc"; 
+	var d = true;
+	d= Number(d);
+	c = parseFloat(c);
+	//typeof的返回值是一个字符串
+	c = typeof c;
+	
+	c = 555;
+	c = 0xff;
+	c = 0xacfd;
+	//对于非string，先转换成string，再转换成int
+	//16进制：0x开头 八进制：0开头 二进制：0b开头
+	//也可以用下行方法转换
+	c = 100;
+	c = parseInt(c,8);
+	
+	var e = " ";
+	e = Boolean(e);
+	
+	c = 1;
+	e = "a";
+	e = c + e;
+	
+	console.log(e);
+	console.log(typeof e);
+	
+	console.log(c);
+	console.log(typeof c);
+	console.log(d);
+	console.log(typeof d);
+	//在body里进行输出
+	document.write("你真帅");
+	//想控制台进行输出
+	console.log("想控制进行输出");
+	</script>
+</head>
+<body>
+
+
+</body>
+</html>
