@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var btn1 = document.getElementById("btn1");
+		btn1.onclick = function() {
+			var city = document.getElementById("lis");
+			var lis = city.getElementsByTagName("li");
+			for(var i=0;i<lis.length;i++) {
+				alert(lis[i].innerHTML);
+			}
+		}
+		var btn2 = document.getElementById("btn2");
+		btn2.onclick = function() {
+			var city = document.getElementById("lis");
+			//获取所有子元素节点
+			/*var cns = city.childNodes;
+			for(var i=0;i<cns.length;i++) {
+				alert(cns[i].innerHTML);
+			}*/
+			//获取所有子元素
+			/*var cns2 = city.children;
+			for(var i=0;i<cns2.length;i++) {
+				alert(cns2[i].innerHTML);
+			}*/
+			//获取当前元素第一个字节点，包括空白
+			/*var cns3 = city.firstChild;
+			alert(cns3.innerHTML);*/
+			//不包括空白
+			/*var cns4 = city.firstElementChild;
+			alert(cns4.innerHTML);*/
+			
+			//获取当前元素最后一个字节点，包括空白
+			/*var cns5 = city.lastChild;
+			alert(cns5.innerHTML);*/
+			//不包括空白
+			/*var cns6 = city.lastElementChild;
+			alert(cns6.innerHTML);*/
+			
+			
+			
+		}
+	}
+	
+</script>
+</head>
+<body>
+<button id="btn1">这是一个按钮</button>
+<button id="btn2">这是一个按钮2</button>
+<ul id="lis">
+	<li>孟原</li>
+	<li>许珂</li>
+	<li>老爸</li>
+	<li>老妈</li>
+	<li>萌萌</li>
+	<li>略略略</li>
+</ul>
+</body>
+</html>

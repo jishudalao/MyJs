@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		 var name = navigator.userAgent;
+		 console.log(name);
+		 
+	 	var btn1 = document.getElementById("btn1");
+	 	btn1.onclick = function() {
+	 		history.back();
+	 	}
+	}
+	
+</script>
+</head>
+<body>
+<button id="btn1">点击后退</button>
+</body>
+</html>
