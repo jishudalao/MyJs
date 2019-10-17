@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>°ÂÔËÎå»·</title>
+<style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .wrapper{
+        width: 780px;
+        height: 370px;
+        border:1px solid black;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -390px;
+        margin-top: -185px;
+    }
+    .circle{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        position: absolute;
+    }
+    /*À¶ºÚºì»ÆÂÌ*/
+    .blue{
+        border:20px solid blue;
+    }
+    .blue2{
+        border:20px solid transparent;
+        border-right-color: blue;
+        z-index: 2;
+    }
+    .black{
+        border:20px solid black;
+        left: 270px;
+    }
+    .black2{
+        border:20px solid transparent;
+        border-bottom-color: black;
+        border-right-color: black;
+        left: 270px;
+        z-index: 2;
+    }
+    .red{
+        border:20px solid red;
+        left: 540px;
+    }
+    .red2{
+        border:20px solid transparent;
+        border-left-color: red;
+        left: 540px;
+        z-index: 2;
+    }
+    .yellow{
+        border:20px solid yellow;
+        left: 140px;
+        top:130px;
+    }
+    .green{
+        border:20px solid green;
+        left: 410px;
+        top:130px;
+    }
+    .green2{
+        border:20px solid transparent;
+        border-left-color: green;
+        left: 410px;
+        top:130px;
+        z-index: 2;
+    }
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class = "circle blue"></div>
+        <div class = "circle blue2"></div>
+        <div class = "circle black"></div>
+        <div class = "circle black2"></div>
+        <div class = "circle red"></div>
+        <div class = "circle red2"></div>
+        <div class = "circle yellow"></div>
+        <div class = "circle green"></div>
+        <div class = "circle green2"></div>
+    </div>
+</body>
+</html>
